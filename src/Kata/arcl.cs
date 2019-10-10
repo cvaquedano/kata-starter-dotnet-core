@@ -4,7 +4,7 @@ namespace Kata
     {
         public string Something()
         {
-            return string.Empty;
+            return "";
         }
     }
 }
