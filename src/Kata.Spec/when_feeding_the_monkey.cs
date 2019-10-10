@@ -1,4 +1,5 @@
-﻿using FluentAssertions;
+﻿using System;
+using FluentAssertions;
 using Machine.Specifications;
 
 namespace Kata.Spec
@@ -15,5 +16,19 @@ namespace Kata.Spec
 
         It should_have_the_food_in_its_belly = () =>
             _systemUnderTest.Belly.Should().Contain("banana");
+    }
+
+    public class when_spec_test
+    {
+        Establish _context = () =>
+        {
+            _systemUnderTest = new arcl();
+        };
+
+        Because of = () => { _result = _systemUnderTest.Something(); };
+
+        It should_something = () => { _result.Should().Be(string.Empty); };
+        static arcl _systemUnderTest;
+        static string _result;
     }
 }
