@@ -27,7 +27,7 @@ namespace Kata.Spec
 
         Because of = () => { _result = _systemUnderTest.Something(); };
 
-        It should_something = () => { _result.Should().Be(""); };
+        It should_something = () => { _result.Should().Be("11"); };
         static arcl _systemUnderTest;
         static string _result;
     }
