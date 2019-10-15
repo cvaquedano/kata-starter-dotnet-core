@@ -10,15 +10,9 @@ namespace Kata
             {
                 return 0;
             }
-            var elementos =  s.Split(',');
-            
-            if (elementos.Length == 1)
-            {
-                return int.Parse(elementos[0]);
-            }
+            var elementos =  s.Split(',').Select(int.Parse);
 
-            return int.Parse(elementos[0]) + int.Parse(elementos[1]);
-           
+            return elementos.Sum();
         }
     }
 }
