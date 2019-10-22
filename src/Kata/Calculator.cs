@@ -16,7 +16,10 @@ namespace Kata
             if (s.Contains("//"))
             {
                 var splittedText = s.Split("\n");
-                var delimiter = splittedText[0].Replace("/","");
+                var delimiter = splittedText[0]
+                    .Replace("/","")
+                    .Replace("[", "")
+                    .Replace("]","");
                 delimiters = new[] {delimiter};
                 s = splittedText[1];
             }
