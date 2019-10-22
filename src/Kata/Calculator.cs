@@ -19,8 +19,9 @@ namespace Kata
                 var delimiter = splittedText[0]
                     .Replace("/","")
                     .Replace("[", "")
-                    .Replace("]","");
-                delimiters = new[] {delimiter};
+                    .Split("]");
+                
+                delimiters = delimiter;
                 s = splittedText[1];
             }
 
