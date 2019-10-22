@@ -23,11 +23,11 @@ namespace Kata
 
             var numbers = s.Split(delimiters, StringSplitOptions.None).Select((int.Parse));
 
-            var negative = numbers.FirstOrDefault(x => x < 0);
+            var negatives = numbers.Where(x => x < 0);
 
-            if (negative != 0)
+            if (negatives.Any())
             {
-                throw new Exception("negatives not allowed: " + negative);
+                throw new Exception("negatives not allowed: " + string.Join(", ", negatives));
             }
             
             return numbers.Sum();
