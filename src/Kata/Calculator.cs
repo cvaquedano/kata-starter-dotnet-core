@@ -11,7 +11,16 @@ namespace Kata
                 return 0;
             }
 
-            return 1;
+            var numbers = s.Split(",").Select((int.Parse));
+
+            if (numbers.Count()== 1)
+            {
+                return 1;
+            }
+
+            return numbers.First() + numbers.Last();
+
+          
         }
     }
 }
