@@ -16,6 +16,17 @@ namespace Kata.Spec
         It should_have_the_food_in_its_belly = () =>
             _systemUnderTest.Belly.Should().Contain("banana");
     }
+
+    public class when__input_empty_string
+    {
+        Establish _context = () => { _systemUnderTest = new Calculator(); };
+
+        Because of = () => { _result = _systemUnderTest.Add(); };
+
+        It should_Return_zero = () => { _result.Should().Be(0); };
+        static Calculator _systemUnderTest;
+        static int _result;
+    }
 }
 
 //1. Given the user input is empty when calculating the sum then it should return zero.
