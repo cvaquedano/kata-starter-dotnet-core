@@ -22,7 +22,7 @@ namespace Kata
             }
 
             
-            var numbers = s.Split(delimiters,StringSplitOptions.None).Select(int.Parse);
+            var numbers = s.Split(delimiters,StringSplitOptions.None).Select(int.Parse).Where(x=> x < 1001);
 
             var negative = numbers.Where(x => x < 0);
             if (negative.Any())
