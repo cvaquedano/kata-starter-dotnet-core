@@ -25,9 +25,9 @@ namespace Kata
             var numbers = s.Split(delimiters,StringSplitOptions.None).Select(int.Parse);
 
             var negative = numbers.Where(x => x < 0);
-            if (negative.Count()==1)
+            if (negative.Any())
             {
-                throw new Exception("negatives not allowed: " + negative.First());
+                throw new Exception("negatives not allowed: " + string.Join(", ", negative));
     
             }
 
